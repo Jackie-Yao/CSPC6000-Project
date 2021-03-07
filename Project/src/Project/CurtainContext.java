@@ -2,6 +2,7 @@ package Project;
 
 public class CurtainContext {
 	CurtainState curtainstate;
+	String indent = " 	";
 	
 	public CurtainContext(){
 		this.curtainstate = new CurtainOpenState(this);
@@ -12,12 +13,12 @@ public class CurtainContext {
 	}
 	
 	public void OpenCurtain() {
-		System.out.println("Action: Open");
+		System.out.println(this.indent + "Action: Open");
 		this.curtainstate.OpenCurtain();
 	}
 	
 	public void CloseCurtain() {
-		System.out.println("Action: Close");
+		System.out.println(this.indent + "Action: Close");
 		this.curtainstate.CloseCurtain();
 	}
 	

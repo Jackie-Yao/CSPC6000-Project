@@ -2,23 +2,28 @@ package Project;
 
 //
 public class ActionItem {
-	int Hour;
-	int Minute;
-	int index;
+	Time time;
 	String ActionName;
-	Object someobject;
+
 	
-	public ActionItem(int hour, int minute) {
-		this.Hour = hour;
-		this.Minute = minute;
-		this.index = hour * 10 + minute;
-		this.ActionName = "";
+	// reserved for idle time slot
+	public ActionItem(Time time) {
+		this.time = time;
+		this.ActionName = null;
+	}
+	
+	// allow user input
+	public ActionItem(Time time, String ActionName) {
+		this.time = time;
+		this.ActionName = ActionName;
 	}
 	
 	
-	public void TimeWarning() {
-		//build some test case here
-		System.out.println("Hour in the scale of 24, Minute options = [0,10,20,30,40,50]");
-		
+	public String GetAction() {
+		return this.ActionName;
+	}
+	
+	public void PrettyPrintAction() {
+		System.out.println(this.time.GetTime() + " - " + this.ActionName);
 	}
 }
