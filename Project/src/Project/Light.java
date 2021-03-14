@@ -11,13 +11,18 @@ public class Light {
 		this.DimTime = 10;
 	}
 	
-	public Light(int DimTime) {
+	public void resetDimTime(int DimTime) {
 		this.DimTime = DimTime;
+	}
+	
+	public double getLightness() {
+		return this.Lightness;
 	}
 	
 	public void PrintLightness() {
 		System.out.println("Lightness = " + String.format("%3.0f", this.Lightness)  + " %" );
 	}
+	
 	
 	
 	public void DimUp() {		

@@ -25,4 +25,8 @@ public class CurtainContext {
 	public void PrintStatus() {
 		this.curtainstate.PrintStatus();
 	}
+	
+	public String getStatus() {
+		return this.curtainstate.getStatus();
+	}
 }

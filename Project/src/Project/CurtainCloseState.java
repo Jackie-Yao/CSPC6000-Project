@@ -22,7 +22,13 @@ public class CurtainCloseState implements CurtainState {
 
 	@Override
 	public void PrintStatus() {
-		System.out.println(this.indent + "Current Curtain Status: Closed");	
+		System.out.println(this.indent + "Current Curtain Status: " + this.getStatus());	
 		
+	}
+
+	@Override
+	public String getStatus() {
+		// TODO Auto-generated method stub
+		return "Closed";
 	}
 }

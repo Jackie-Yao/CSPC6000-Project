@@ -23,6 +23,11 @@ public class CurtainOpenState implements CurtainState {
 
 	@Override
 	public void PrintStatus() {
-		System.out.println(this.indent + "Current Curtain Status: Opened");	
+		System.out.println(this.indent + "Current Curtain Status: " + this.getStatus());	
+	}
+
+	@Override
+	public String getStatus() {
+		return "Opened";	
 	}
 }

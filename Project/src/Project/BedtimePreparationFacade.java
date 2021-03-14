@@ -57,7 +57,8 @@ public class BedtimePreparationFacade {
 		} else {
 			System.out.println(this.indent + ActionName);
 		}
-	}
+	
+}
 	
 	public void StartPreparation() {
 		while(iter.hasNext()) {
